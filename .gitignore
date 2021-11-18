@@ -143,3 +143,5 @@ buildNumber.properties
 # End of https://www.toptal.com/developers/gitignore/api/intellij+all,java,maven
 
 !SingleList.jar
+/CajaNegra.iml
+/vv_caja_negra.iml

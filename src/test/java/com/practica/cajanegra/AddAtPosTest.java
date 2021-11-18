@@ -11,10 +11,8 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 public class AddAtPosTest {
 
 
-	//TODO: Preguntar profesora si los test con @ y [ deberían fallar o no.
-
 	/**
-	 * Casos de prueba C1-C7
+	 * Casos de prueba con salida IllegalArgumentException, Clases E1, E3 y P1
 	 *
 	 * @param element
 	 * @param p
@@ -38,7 +36,6 @@ public class AddAtPosTest {
 			"[,	6",
 			"@,	7",
 			"[,	7"
-
 	})
 	void testExceptions(String element, int p) {
 		SingleLinkedListImpl<String> lista = new SingleLinkedListImpl<>("A", "B", "C", "D", "E", "F");
@@ -46,7 +43,7 @@ public class AddAtPosTest {
 	}
 
 	/**
-	 * Casos C8-C35
+	 * Casos correspondientes a las clases E2 y P2
 	 *
 	 * @param element
 	 * @param p
@@ -81,7 +78,7 @@ public class AddAtPosTest {
 	}
 
 	/**
-	 * Casos C36-C42
+	 * Casos correspondientes a las clases E2 y P3
 	 *
 	 * @param element
 	 * @param p
