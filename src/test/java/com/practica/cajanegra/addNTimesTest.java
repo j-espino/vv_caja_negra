@@ -338,7 +338,7 @@ public class addNTimesTest {
     void testAddNElements1(String element, int n) {
         SingleLinkedListImpl<String> lista = new SingleLinkedListImpl<>();
         lista.addNTimes(element, n);
-        assertEquals(lista.getAtPos(n), element);
+        assertEquals(lista.getAtPos(lista.size()), element);
     }
 
     @ParameterizedTest
@@ -379,7 +379,7 @@ public class addNTimesTest {
     void testAddNElements2(String element, int n) {
         SingleLinkedListImpl<String> lista = new SingleLinkedListImpl<>("A");
         lista.addNTimes(element, n);
-        assertEquals(lista.getAtPos(n), element);
+        assertEquals(lista.getAtPos(lista.size()), element);
     }
 
     @ParameterizedTest
@@ -420,7 +420,7 @@ public class addNTimesTest {
     void testAddNElements3(String element, int n) {
         SingleLinkedListImpl<String> lista = new SingleLinkedListImpl<>("A","B","C");
         lista.addNTimes(element, n);
-        assertEquals(lista.getAtPos(n), element);
+        assertEquals(lista.getAtPos(lista.size()), element);
     }
 
     @ParameterizedTest
@@ -461,7 +461,7 @@ public class addNTimesTest {
     void testAddNElements4(String element, int n) {
         SingleLinkedListImpl<String> lista = new SingleLinkedListImpl<>("A","B","C","D","E");
         lista.addNTimes(element, n);
-        assertEquals(lista.getAtPos(n), element);
+        assertEquals(lista.getAtPos(lista.size()), element);
     }
 
     @ParameterizedTest
@@ -502,6 +502,6 @@ public class addNTimesTest {
     void testAddNElements5(String element, int n) {
         SingleLinkedListImpl<String> lista = new SingleLinkedListImpl<>("A","B","C","D","E","F");
         lista.addNTimes(element, n);
-        assertEquals(lista.getAtPos(n), element);
+        assertEquals(lista.getAtPos(lista.size()), element);
     }
 }

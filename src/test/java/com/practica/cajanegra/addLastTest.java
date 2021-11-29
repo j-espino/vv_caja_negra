@@ -19,6 +19,11 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 public class addLastTest {
 
     //Lista = ["A","B","C","D","E","F"]
+    /**
+    * Casos de prueba para las clases 7. / 9. / 10. / (1. 4. 6.) / 11. / 12. / 8.
+    * para todos los tipo de estado de la lista.
+    * @param element
+    * */
     @ParameterizedTest
     @Order(1)
     @DisplayName("Lista Vacia")
@@ -130,7 +135,13 @@ public class addLastTest {
 //CASOS DE PRUEBA ESPECIALES===========================================================================================
 //=====================================================================================================================
 
-    //""****************************************************************************
+    /**
+     * Casos de prueba para las clases 2. , 3. y  5.
+     * para todos los tipo de estado de la lista.
+     * @param element
+     * */
+
+    // "" ****************************************************************************
     @ParameterizedTest
     @Order(7)
     @DisplayName("CASO DE PRUEBA ESPECIAL:Lista Vacia con elemento vacio")
@@ -191,7 +202,7 @@ public class addLastTest {
         assertEquals(lista.getAtPos(7),element);
     }
 
-    //"M, N"****************************************************************************
+    // "M, N" ****************************************************************************
 
     @ParameterizedTest
     @Order(13)
@@ -265,16 +276,16 @@ public class addLastTest {
         assertEquals(lista.getAtPos(7),element);
     }
 
-    //"107374182" N/2 = 107374182****************************************************************************
+    // "107374182" N/2 = 107374182 ****************************************************************************
 
     @ParameterizedTest
     @Order(19)
     @CsvSource({
             "107374182"
     })
-    @DisplayName("CASO DE PRUEBA ESPECIAL:Lista Vacia con dos argumentos")
-    void testListaVaciaConInt(String element) {
-        SingleLinkedListImpl<String> lista = new SingleLinkedListImpl<>();
+    @DisplayName("CASO DE PRUEBA ESPECIAL:Lista Vacia con N/2")
+    void testListaVaciaConInt(int element) {
+        SingleLinkedListImpl<Integer> lista = new SingleLinkedListImpl<>();
         lista.addLast(element);
         assertEquals(lista.getAtPos(1),element);
     }
@@ -284,7 +295,7 @@ public class addLastTest {
     @CsvSource({
             "107374182"
     })
-    @DisplayName("CASO DE PRUEBA ESPECIAL: Lista con un elemento y con dos argumentos")
+    @DisplayName("CASO DE PRUEBA ESPECIAL: Lista con un elemento y con N/2")
     void testListaUnElemenConInt(String element) {
         SingleLinkedListImpl<String> lista = new SingleLinkedListImpl<>("A");
         lista.addLast(element);
@@ -296,7 +307,7 @@ public class addLastTest {
     @CsvSource({
             "107374182"
     })
-    @DisplayName("CASO DE PRUEBA ESPECIAL: Lista con dos elementos y con dos argumentos")
+    @DisplayName("CASO DE PRUEBA ESPECIAL: Lista con dos elementos y con N/2")
     void testListaDosElemConInt(String element) {
         SingleLinkedListImpl<String> lista = new SingleLinkedListImpl<>("A","B");
         lista.addLast(element);
@@ -308,7 +319,7 @@ public class addLastTest {
     @CsvSource({
             "107374182"
     })
-    @DisplayName("CASO DE PRUEBA ESPECIAL: Lista con n/2 elementos y con dos argumentos")
+    @DisplayName("CASO DE PRUEBA ESPECIAL: Lista con n/2 elementos y con N/2")
     void testListaMitadElemConInt(String element) {
         SingleLinkedListImpl<String> lista = new SingleLinkedListImpl<>("A","B","C");
         lista.addLast(element);
@@ -320,7 +331,7 @@ public class addLastTest {
     @CsvSource({
             "107374182"
     })
-    @DisplayName("CASO DE PRUEBA ESPECIAL: Lista con n-1 elementos y con dos argumentos")
+    @DisplayName("CASO DE PRUEBA ESPECIAL: Lista con n-1 elementos y con N/2")
     void testListaNMenosUnoElemConInt(String element) {
         SingleLinkedListImpl<String> lista = new SingleLinkedListImpl<>("A","B","C","D","E");
         lista.addLast(element);
@@ -332,7 +343,7 @@ public class addLastTest {
     @CsvSource({
             "107374182"
     })
-    @DisplayName("CASO DE PRUEBA ESPECIAL: Lista con n elementos y con dos argumentos")
+    @DisplayName("CASO DE PRUEBA ESPECIAL: Lista con n elementos y con N/2")
     void testListaNElemConInt(String element) {
         SingleLinkedListImpl<String> lista = new SingleLinkedListImpl<>("A","B","C","D","E","F");
         lista.addLast(element);
