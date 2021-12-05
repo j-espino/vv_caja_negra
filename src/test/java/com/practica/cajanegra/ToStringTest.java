@@ -13,14 +13,15 @@ public class ToStringTest {
     public void testToString()
     {
         SingleLinkedListImpl<String> lista = new SingleLinkedListImpl<>("A", "B", "C", "D", "E", "F");
-        String expected = "ABCDEF";
+        String expected = "[A, B, C, D, E, F]";
         assertEquals(expected, lista.toString());
     }
 
     @Test
     void testListaVacia() {
         SingleLinkedListImpl<String> lista = new SingleLinkedListImpl<>();
-        assertThrows(java.util.NoSuchElementException.class, () -> lista.toString());
+        String expected = "[]";
+        assertEquals(expected, lista.toString());
     }
 
 };

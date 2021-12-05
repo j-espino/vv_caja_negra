@@ -8,19 +8,11 @@ import org.junit.jupiter.params.provider.CsvSource;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class indexOfTest {
-    @ParameterizedTest
-    @CsvSource({
+    @Test
 
-            "A",
-            "B",
-            "M",
-            "Y",
-            "Z"
-
-    })
     void testListaVacia(String element) {
         SingleLinkedListImpl<String> lista = new SingleLinkedListImpl<>();
-        assertThrows(java.util.NoSuchElementException.class, () -> lista.indexOf(element));
+        assertThrows(java.util.NoSuchElementException.class, () -> lista.indexOf("A"));
     }
     @ParameterizedTest
     @CsvSource({
@@ -29,33 +21,25 @@ public class indexOfTest {
             "B,2",
             "M,3",
             "Y,4",
-            "Z,5",
+            "Z,5"
 
     })
     void testListaCorrespondida(String element,int p) {
         SingleLinkedListImpl<String> lista = new SingleLinkedListImpl<>("A","B","M","Y","Z");
         assertEquals(lista.indexOf(element), p);
     }
-    @ParameterizedTest
-    @CsvSource({
+    @Test
 
-            "A",
-            "B",
-            "M",
-            "Y",
-            "Z",
-
-    })
-    void testListaNoCorrespondida(String element) {
+    void testListaNoCorrespondida() {
         SingleLinkedListImpl<String> lista = new SingleLinkedListImpl<>("E","F","G","H","I");
-        assertThrows(java.util.NoSuchElementException.class, () -> lista.indexOf(element));
+        assertThrows(java.util.NoSuchElementException.class, () -> lista.indexOf("B"));
 
     }
     @ParameterizedTest
     @CsvSource({
 
             "@,1",
-            "[,2",
+            "[,2"
 
     })
     void testValoresFueraRango(String element, int p){
